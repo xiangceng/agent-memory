@@ -1,0 +1,29 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---- 数据与第三方代码（体积大，不入库）----
+data/
+third_party/
+*.jsonl.log
+retrieval_logs/
+generation_logs/
+index_expansion_logs/
+
+# ---- 密钥 ----
+.env
+*.key
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ---- 注意 ----
+# results/ 要入库（便于追溯历史实验），不要忽略
+!results/

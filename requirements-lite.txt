@@ -1,0 +1,24 @@
+# 只跑评测 + 调用 API 的最小依赖
+# 注意：以 LongMemEval 官方 requirements-lite.txt 为准，
+#      官方文件里可能有版本锁定，装完后对比一次。
+
+# OpenAI 兼容客户端（DeepSeek / 通义 / OpenAI 均可用）
+openai>=1.30.0
+
+# 数据处理
+pandas>=2.0
+numpy>=1.24
+
+# 数据下载（HuggingFace）
+huggingface_hub>=0.23
+
+# 工具
+python-dotenv>=1.0
+tqdm>=4.66
+pyyaml>=6.0
+
+# ---- 以下在实现 RAG 基线时再装 ----
+# sentence-transformers>=2.7      # BGE-M3 向量化
+# chromadb>=0.5                   # 向量库（起步用）
+# rank_bm25>=0.2                  # BM25 稀疏检索
+# FlagEmbedding>=1.2              # BGE-M3 / BGE-reranker 官方包

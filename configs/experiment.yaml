@@ -1,0 +1,43 @@
+# 实验配置模板
+# 原则：所有对比实验都必须在"相同模型调用预算"下进行，否则结论无效
+
+baseline:
+  name: full_context          # full_context | sliding_window | naive_rag | ours
+  data: data/longmemeval_oracle.json
+  subset: 50                  # 先跑子集；0 = 全量
+
+llm:
+  model: ${LLM_MODEL}
+  temperature: 0
+  max_tokens: 512
+
+budget:
+  # 同预算对比的核心：限制每题模型调用次数
+  max_llm_calls_per_question: 10
+  max_prompt_tokens: 120000   # 超过则触发压缩策略
+
+memory:
+  # 三级写入门控（创新点 1）—— 12 月实现
+  gate:
+    l1_similarity_threshold: 0.92   # 向量新颖度阈值
+    l2_rules_enabled: true
+    l3_info_gain_threshold: 0.5
+  # 分层冲突消解（创新点 2）—— 1 月实现
+  conflict:
+    deterministic_branch: true      # 有显式版本元数据的当前值冲突 → 走规则
+    semantic_weighted: true         # 其余情形 → 语义加权
+    half_life_days: 30
+    source_trust:
+      user_explicit: 1.0
+      tool_result: 0.9
+      inferred: 0.6
+  # 上下文治理（创新点 3）—— 2 月实现
+  compaction:
+    structural_trim: true
+    turn_level_keep: true
+    entity_preservation_check: true
+
+judge:
+  # 判分模型一经确定，全部实验沿用，不得中途更换
+  model: ${JUDGE_MODEL}
+  human_spot_check: 20        # 人工抽检条数（写进论文"实验设置"）
