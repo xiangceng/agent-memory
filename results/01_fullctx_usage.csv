@@ -1,0 +1,6 @@
+question_id,question_type,prompt_tokens,completion_tokens,total_tokens,latency_ms,history_chars
+gpt4_2655b836,temporal-reasoning,8956,26,8982,1158,42241
+gpt4_2487a7cb,temporal-reasoning,7114,9,7123,659,34386
+gpt4_76048e76,temporal-reasoning,5707,24,5731,920,25663
+gpt4_2312f94c,temporal-reasoning,5995,29,6024,1237,26399
+0bb5a684,temporal-reasoning,7426,2,7428,1328,35639
