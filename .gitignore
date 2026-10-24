@@ -27,3 +27,9 @@ desktop.ini
 # ---- 注意 ----
 # results/ 要入库（便于追溯历史实验），不要忽略
 !results/
+
+# ---- 测试缓存 ----
+.pytest_cache/
+.coverage
+htmlcov/
+
