@@ -1,0 +1,5 @@
+{"question_id": "gpt4_2655b836", "hypothesis": "The GPS system issue on 3/22 (it had to be taken back to the dealership and the entire system was replaced).", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_2487a7cb", "hypothesis": "The 'Data Analysis using Python' webinar.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_76048e76", "hypothesis": "The bike \u2014 I took it in for repairs in mid-February, before washing the car on February 27th.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_2312f94c", "hypothesis": "The Samsung Galaxy S22 \u2014 I got it on February 20th, while the Dell XPS 13 arrived on February 25th.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "0bb5a684", "hypothesis": "7 days", "autoeval_label": {"model": "deepseek-chat", "label": true}}
