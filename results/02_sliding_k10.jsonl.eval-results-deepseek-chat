@@ -1,0 +1,50 @@
+{"question_id": "6a1eabeb", "hypothesis": "25:50", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "6aeb4375", "hypothesis": "Four", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "830ce83f", "hypothesis": "Rachel moved back to the suburbs.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "852ce960", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "945e3d21", "hypothesis": "Three times a week.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "d7c942c3", "hypothesis": "Yes, your mom is using the same grocery list app as you.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "71315a70", "hypothesis": "10-12 hours", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "89941a93", "hypothesis": "Four bikes.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "0a995998", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "6d550036", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_59c863d7", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "b5ef892d", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "e831120c", "hypothesis": "Two weeks for the MCU movies; the time for the main Star Wars films isn't mentioned.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "3a704032", "hypothesis": "Based on the history, you mentioned getting a snake plant from your sister last month. That's the only plant acquisition mentioned, so the answer is **one** (the snake plant).", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_d84a3211", "hypothesis": "$65", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "aae3761f", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_f2262a51", "hypothesis": "Based on the history, you mentioned visiting **Dr. Patel** (the ENT specialist) and your **primary care physician** (whom you planned to schedule a follow-up with). That's **2 different doctors**.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "dd2973ad", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "c4a1ceb8", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_a56e767c", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "6cb6f249", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "7161e7e2", "hypothesis": "Admon was on the 8 am - 4 pm (Day Shift) on Sunday.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "c4f10528", "hypothesis": "Miss Bee Providore", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "89527b6b", "hypothesis": "Blue", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "e9327a54", "hypothesis": "The Sugar Factory", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "4c36ccef", "hypothesis": "Roscioli", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "6ae235be", "hypothesis": "At the Lake Charles Refinery, the processes mentioned were: atmospheric distillation, fluid catalytic cracking (FCC), alkylation, and hydrotreating.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "8a2466db", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "06878be2", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "75832dbd", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "e47becba", "hypothesis": "Business Administration", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "118b2229", "hypothesis": "45 minutes each way", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "51a45a95", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "58bf7951", "hypothesis": "The Glass Menagerie", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "1e043500", "hypothesis": "Summer Vibes", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "c5e8278d", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "6ade9755", "hypothesis": "Serenity Yoga", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_2655b836", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_2487a7cb", "hypothesis": "The 'Data Analysis using Python' webinar.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_76048e76", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_2312f94c", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "0bb5a684", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "08f4fc43", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "2c63a862", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_385a5000", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "2a1811e2", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "bbf86515", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_5dcc0aab", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_0b2f1d21", "hypothesis": "The malfunction of the stand mixer happened first.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "f0853d11", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
