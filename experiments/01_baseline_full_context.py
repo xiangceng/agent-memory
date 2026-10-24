@@ -85,6 +85,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--data', default=os.path.join(ROOT, 'data', 'longmemeval_oracle.json'))
     ap.add_argument('--subset', type=int, default=0, help='只跑前 N 题；0 表示全量')
+    ap.add_argument('--stratified', action='store_true',
+                    help='按题型分层抽样（强烈建议与 --subset 同用：数据按题型排序，直接取前 N 题会全是 temporal-reasoning）')
     ap.add_argument('--out', default=os.path.join(ROOT, 'results', '01_fullctx.jsonl'))
     ap.add_argument('--sleep', type=float, default=0.2, help='每次调用后的间隔秒数，防止限流')
     args = ap.parse_args()
@@ -106,6 +108,23 @@ def main():
         data = json.load(f)
     if args.subset and args.subset > 0:
         data = data[:args.subset]
+
+    # ⚠️ 数据按题型排序，直接取前 N 题会全是 temporal-reasoning。
+    # --stratified 时按题型比例分层抽样，保证覆盖 knowledge-update 等重点题型。
+    if args.stratified and args.subset:
+        from collections import defaultdict
+        buckets = defaultdict(list)
+        for x in data:
+            buckets[x.get('question_type', '?')].append(x)
+        total = len(data)
+        picked = []
+        for t in sorted(buckets):
+            k = max(1, round(args.subset * len(buckets[t]) / total))
+            picked.extend(buckets[t][:k])
+        # 截断到目标数量，并保持题型交错以均衡分布
+        data = picked[:args.subset]
+        from collections import Counter
+        print('分层抽样题型分布:', dict(sorted(Counter(x['question_type'] for x in data).items())))
 
     done = load_done(args.out)
     todo = [x for x in data if x['question_id'] not in done]
