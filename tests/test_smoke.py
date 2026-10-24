@@ -11,8 +11,15 @@ import sys
 import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, 'experiments'))
+sys.path.insert(0, ROOT)
 
+from src.eval.longmemeval import (  # noqa: E402
+    build_history_full, build_history_window, make_prompt, is_abs,
+    PROMPT_NOCOT, PROMPT_COT,
+)
+
+
+# ---------------------------------------------------------------- 配置
 
 def test_env_example_exists():
     """配置模板必须存在，且包含关键字段。"""
@@ -31,18 +38,16 @@ def test_gitignore_covers_sensitive():
         assert pat in text, f'.gitignore 未忽略 {pat}'
 
 
+# ---------------------------------------------------------------- 历史拼接
+
 def test_build_history_handles_empty():
-    """history 拼接函数应能处理空会话，不抛异常。"""
-    from importlib import import_module
-    mod = import_module('01_baseline_full_context')
-    text, n_sess, n_turns = mod.build_history({'haystack_sessions': [], 'haystack_dates': []})
+    """空会话不应抛异常。"""
+    text, n_sess, n_turns = build_history_full({'haystack_sessions': [], 'haystack_dates': []})
     assert text == '' and n_sess == 0 and n_turns == 0
 
 
-def test_build_history_formats_sessions():
-    """history 应包含会话分隔、日期、角色标记。"""
-    from importlib import import_module
-    mod = import_module('01_baseline_full_context')
+def test_build_history_official_format():
+    """历史格式必须与官方一致：### Session / Session Date / Session Content / role: content。"""
     inst = {
         'haystack_sessions': [
             [{'role': 'user', 'content': 'I live in Guangzhou'},
@@ -50,12 +55,68 @@ def test_build_history_formats_sessions():
         ],
         'haystack_dates': ['2026-03-05'],
     }
-    text, n_sess, n_turns = mod.build_history(inst)
+    text, n_sess, n_turns = build_history_full(inst)
     assert n_sess == 1 and n_turns == 2
-    assert '2026-03-05' in text
-    assert '[user]' in text and '[assistant]' in text
-    assert 'Guangzhou' in text
+    assert '### Session 1:' in text
+    assert 'Session Date: 2026-03-05' in text
+    assert 'Session Content:' in text
+    assert '\n\nuser: I live in Guangzhou' in text
+    assert '\n\nassistant: Noted.' in text
+    # 不应出现旧版自定义格式
+    assert '[user]' not in text
 
+
+def test_build_history_window_keeps_last_k():
+    """窗口基线只保留最近 k 轮。"""
+    inst = {
+        'haystack_sessions': [
+            [{'role': 'user', 'content': f'msg{i}'} for i in range(10)],
+            [{'role': 'user', 'content': f'msg{i}'} for i in range(10, 20)],
+        ],
+        'haystack_dates': ['2026-01-01', '2026-02-01'],
+    }
+    text, n_sess, n_turns = build_history_window(inst, 5)
+    assert n_turns == 5
+    assert 'msg19' in text
+    assert 'msg15' in text
+    assert 'msg14' not in text   # 被窗口截掉
+    assert 'msg0' not in text
+
+
+# ---------------------------------------------------------------- Prompt 口径
+
+def test_prompt_matches_official():
+    """prompt 必须与官方模板一致：无 system 文案、无拒答指令、以 Answer: 结尾。"""
+    inst = {'question': 'Q?', 'question_date': '2026-01-01'}
+    p = make_prompt(inst, 'HISTORY', cot=False)
+    assert p.startswith('I will give you several history chats between you and a user. '
+                        'Please answer the question based on the relevant chat history.')
+    assert '\n\n\nHistory Chats:\n\nHISTORY\n\nCurrent Date: 2026-01-01\nQuestion: Q?\nAnswer:' in p
+    assert p.rstrip().endswith('Answer:')
+    assert "I don't know" not in p
+    assert 'You are a helpful assistant' not in p
+
+
+def test_prompt_cot_variant():
+    """CoT 版本结尾应为 Answer (step by step):。"""
+    p = make_prompt({'question': 'Q?', 'question_date': 'D'}, 'H', cot=True)
+    assert p.rstrip().endswith('Answer (step by step):')
+    assert 'step by step' in p
+
+
+def test_prompt_templates_have_three_placeholders():
+    """两个模板都必须恰好有 3 个占位符（history / date / question）。"""
+    for tpl in (PROMPT_NOCOT, PROMPT_COT):
+        assert tpl.count('{}') == 3
+
+
+def test_is_abs():
+    """弃答题用 _abs 标记。"""
+    assert is_abs('0a995998_abs')
+    assert not is_abs('0a995998')
+
+
+# ---------------------------------------------------------------- 数据
 
 def test_data_optional_but_valid_if_present():
     """数据若已下载，应能被解析且字段齐全（未下载则跳过）。"""
@@ -67,3 +128,5 @@ def test_data_optional_but_valid_if_present():
     need = {'question_id', 'question_type', 'question', 'answer',
             'question_date', 'haystack_sessions', 'haystack_dates', 'answer_session_ids'}
     assert need.issubset(data[0].keys()), f'缺少字段: {need - set(data[0].keys())}'
+    n_abs = sum(1 for x in data if is_abs(x['question_id']))
+    assert n_abs == 30, f'弃答题数量应为 30，实际 {n_abs}'
