@@ -106,13 +106,12 @@ def main():
 
     with open(args.data, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    if args.subset and args.subset > 0:
-        data = data[:args.subset]
 
     # ⚠️ 数据按题型排序，直接取前 N 题会全是 temporal-reasoning。
-    # --stratified 时按题型比例分层抽样，保证覆盖 knowledge-update 等重点题型。
-    if args.stratified and args.subset:
-        from collections import defaultdict
+    # --stratified 时必须先在全量数据上分层抽样，再截断到 N；
+    # 顺序反了就会在已截断的单一题型子集上"分层"，等于没分。
+    if args.stratified and args.subset and args.subset > 0:
+        from collections import Counter, defaultdict
         buckets = defaultdict(list)
         for x in data:
             buckets[x.get('question_type', '?')].append(x)
@@ -121,10 +120,13 @@ def main():
         for t in sorted(buckets):
             k = max(1, round(args.subset * len(buckets[t]) / total))
             picked.extend(buckets[t][:k])
-        # 截断到目标数量，并保持题型交错以均衡分布
         data = picked[:args.subset]
-        from collections import Counter
         print('分层抽样题型分布:', dict(sorted(Counter(x['question_type'] for x in data).items())))
+    elif args.subset and args.subset > 0:
+        data = data[:args.subset]
+        from collections import Counter
+        print('⚠️ 未启用 --stratified，取前 N 题；题型分布:',
+              dict(sorted(Counter(x['question_type'] for x in data).items())))
 
     done = load_done(args.out)
     todo = [x for x in data if x['question_id'] not in done]

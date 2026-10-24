@@ -1,0 +1,13 @@
+question_id,question_type,prompt_tokens,completion_tokens,total_tokens,latency_ms,history_chars
+6a1eabeb,knowledge-update,7556,3,7559,1689,33915
+6aeb4375,knowledge-update,5201,1,5202,728,22543
+0a995998,multi-session,8385,5,8390,1014,36707
+6d550036,multi-session,14224,5,14229,1130,72267
+gpt4_59c863d7,multi-session,16015,97,16112,1239,71486
+7161e7e2,single-session-assistant,2225,19,2244,877,6772
+8a2466db,single-session-preference,5512,67,5579,1169,25714
+e47becba,single-session-user,3860,2,3862,823,17956
+118b2229,single-session-user,2976,5,2981,721,13171
+gpt4_2655b836,temporal-reasoning,8956,17,8973,970,42241
+gpt4_2487a7cb,temporal-reasoning,7114,9,7123,859,34386
+gpt4_76048e76,temporal-reasoning,5707,2,5709,514,25663
