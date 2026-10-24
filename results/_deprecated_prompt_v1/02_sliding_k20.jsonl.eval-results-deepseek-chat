@@ -1,0 +1,50 @@
+{"question_id": "6a1eabeb", "hypothesis": "25:50", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "6aeb4375", "hypothesis": "Four", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "830ce83f", "hypothesis": "Rachel moved back to the suburbs again.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "852ce960", "hypothesis": "$400,000", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "945e3d21", "hypothesis": "Three times a week.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "d7c942c3", "hypothesis": "Yes, your mom is using the same grocery list app as you now, so you can easily share lists and keep track of what you need.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "71315a70", "hypothesis": "10-12 hours", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "89941a93", "hypothesis": "Four bikes.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "0a995998", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "6d550036", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_59c863d7", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "b5ef892d", "hypothesis": "5 days", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "e831120c", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "3a704032", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_d84a3211", "hypothesis": "$65 (the $25 chain replacement plus the $40 bike lights).", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "aae3761f", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_f2262a51", "hypothesis": "Based on the history, you visited two different doctors: Dr. Smith (your primary care physician) and Dr. Patel (the ENT specialist).", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "dd2973ad", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "c4a1ceb8", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_a56e767c", "hypothesis": "Based on the history, you mentioned attending **two** film festivals: the **Seattle International Film Festival** (where you saw \"The Weight of Water\") and **AFI Fest** in LA (where you saw \"Joker\").", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "6cb6f249", "hypothesis": "10 days", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "7161e7e2", "hypothesis": "Admon was on the 8 am - 4 pm (Day Shift) on Sunday.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "c4f10528", "hypothesis": "Miss Bee Providore", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "89527b6b", "hypothesis": "Blue", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "e9327a54", "hypothesis": "The Sugar Factory", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "4c36ccef", "hypothesis": "Roscioli", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "6ae235be", "hypothesis": "Atmospheric distillation, fluid catalytic cracking (FCC), alkylation, and hydrotreating.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "8a2466db", "hypothesis": "Adobe Premiere Pro's official documentation and tutorials; YouTube channels like Premiere Bro, Video Copilot, and Adobe Creative Cloud; online courses on platforms like Udemy, LinkedIn Learning, and Skillshare; and Premiere Pro communities and forums such as Reddit's r/premierepro and Adobe's Premiere Pro forum.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "06878be2", "hypothesis": "Based on our conversation, here are accessories that would complement your Sony A7R IV setup:\n\n- **Flash**: Godox V1 (which you decided to go with)\n- **Flash protection**: Godox V1 Hard Case, Nanuk 915, Pelican 1060, or pouches from Think Tank Photo, Lowepro, or Vello\n- **External battery packs**: Anker PowerCore 20000 PD, Mophie Powerstation XXL, Jackery Titan S 20000, Anker PowerCore Fusion, EC Technology 22400mAh, or RavPower 20000mAh\n- **Lens cleaning supplies**: Microfiber cloth, lens cleaning tissue/wipes, and lens cleaning solution (for your Sony 24-70mm f/2.8)\n- **Tripod**: Gitzo GT3543LS (with G-Lock Ultra system)\n- **Camera bag**: Brands like Think Tank Photo, Lowepro, F-Stop Gear, Peak Design, and MindShift Gear\n\nNote that for the camera bag, I had asked you some questions (budget, gear amount, bag type, and use case) to narrow down recommendations, so those specifics weren't finalized.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "75832dbd", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "e47becba", "hypothesis": "Business Administration", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "118b2229", "hypothesis": "45 minutes each way.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "51a45a95", "hypothesis": "You redeemed it at Target (using the Cartwheel app).", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "58bf7951", "hypothesis": "The Glass Menagerie", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "1e043500", "hypothesis": "Summer Vibes", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "c5e8278d", "hypothesis": "Johnson", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "6ade9755", "hypothesis": "Serenity Yoga", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_2655b836", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_2487a7cb", "hypothesis": "The 'Data Analysis using Python' webinar.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_76048e76", "hypothesis": "The bike", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_2312f94c", "hypothesis": "The Samsung Galaxy S22.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "0bb5a684", "hypothesis": "7 days", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "08f4fc43", "hypothesis": "30 days", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "2c63a862", "hypothesis": "14 days", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "gpt4_385a5000", "hypothesis": "The tomatoes were started first \u2014 they were started indoors under grow lights on February 20th, while the marigold seeds arrived on March 3rd.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "2a1811e2", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "bbf86515", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_5dcc0aab", "hypothesis": "I don't know.", "autoeval_label": {"model": "deepseek-chat", "label": false}}
+{"question_id": "gpt4_0b2f1d21", "hypothesis": "The malfunction of the stand mixer happened first.", "autoeval_label": {"model": "deepseek-chat", "label": true}}
+{"question_id": "f0853d11", "hypothesis": "14 days", "autoeval_label": {"model": "deepseek-chat", "label": true}}
